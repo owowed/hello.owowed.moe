@@ -5,18 +5,33 @@
   </head>
   <body>
     <div id="azka-message">Hello, Azka!</div>
+    <style>
+      body {
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          height: 100vh;
+          font-family: cursive;
+          font-size: 2rem;
+          font-weight: bold;
+      }
+    </style>
     <script>
       const names = ["Azka", "John", "Horu", "Rifat", "Luna", "Mokou", "Reisen"];
+      const color = ["blue", "yellow", "red", "purple", "pink"];
       const azkaMessage = document.querySelector("#azka-message");
-      let ind = 0;
-
+      let ind = 0, cInd = 0;
 
       setInterval(() => {
         azkaMessage.textContent = `Hello, ${names[ind]}!`;
+        document.body.style.backgroundColor = color[cInd];
         ind++;
-        if (ind > names.length) ind = 0;
+        cInd++;
+        if (ind >= names.length) ind = 0;
+        if (cInd >= color.length) cInd = 0;
         setTimeout(() => {
           azkaMessage.textContent = `Hello, ${names[ind]}!`;
+          document.body.style.backgroundColor = color[cInd];
         }, 2000);
       }, 3000);
     </script>
