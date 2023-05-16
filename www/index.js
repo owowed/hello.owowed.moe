@@ -15,7 +15,7 @@ const iterateCycle = function* (array) {
 
 const bodyColorsIteration = iterateCycle(bodyColors);
 
-let lastHelloNameIndexes = [0, 0, 0];
+const lastHelloNameIndexes = [0, 0, 0];
 
 const intervalFunction = () => {
     let helloNameIndex = Math.floor(Math.random() * helloNames.length);
