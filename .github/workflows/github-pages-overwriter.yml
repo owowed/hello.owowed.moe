@@ -19,4 +19,4 @@ jobs:
         uses: rayluo/github-pages-overwriter@v1.3
         with:
           source-directory: www
-          target-branch: github-page
+          target-branch: gh-pages
