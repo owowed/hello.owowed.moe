@@ -1,0 +1,14 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    gap: 24px;
+}
+
+#orin-dance {
+    width: 200px;
+}
