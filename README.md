@@ -4,6 +4,8 @@
 
 > personal website for myself
 
+> a lot of random stuff you might not care
+
 > currently experimenting
 
-visit at [hello.owowed.moe](https://hello.owowed.moe/)
+visit it at [hello.owowed.moe](https://hello.owowed.moe/)
