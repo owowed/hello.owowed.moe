@@ -6,14 +6,18 @@
   <body>
     <div id="azka-message">Hello, Azka!</div>
     <script>
+      const names = ["Azka", "John", "Horu", "Rifat", "Luna", "Mokou", "Reisen"];
       const azkaMessage = document.querySelector("#azka-message");
+      let ind = 0;
+
 
       setInterval(() => {
-        azkaMessage.textContent = "Hello, Rifat!";
+        azkaMessage.textContent = `Hello, ${names[ind]}!`;
+        ind++;
         setTimeout(() => {
-          azkaMessage.textContent = "Hello, Azka!";
-        }, 200);
-      }, 300);
+          azkaMessage.textContent = `Hello, ${names[ind]}!`;
+        }, 2000);
+      }, 3000);
     </script>
   </body>
 </html>
