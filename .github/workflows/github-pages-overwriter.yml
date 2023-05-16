@@ -1,4 +1,4 @@
-name: Your github action
+name: Github Pages Overwriter
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v3
       
-      - name: placeholder
+      - name: List folders
         run: ls
         
       - name: Publish current workdir (which contains generated content) to GitHub Pages
