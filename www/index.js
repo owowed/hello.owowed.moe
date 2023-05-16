@@ -15,19 +15,20 @@ const iterateCycle = function* (array) {
 
 const bodyColorsIteration = iterateCycle(bodyColors);
 
-let lastHelloNameIndex = 0;
+let lastHelloNameIndexes = [0, 0, 0];
 
 const intervalFunction = () => {
     let helloNameIndex = Math.floor(Math.random() * helloNames.length);
     
-    while (helloNameIndex == lastHelloNameIndex) {
+    while (lastHelloNameIndexes.includes(helloNameIndex)) {
         helloNameIndex = Math.floor(Math.random() * helloNames.length);
     }
 
-    azkaMessage.textContent = `Hello, ${helloNamesIteration[helloNameIndex]}!`;
+    azkaMessage.textContent = `Hello, ${helloNames[helloNameIndex]}!`;
     document.body.style.backgroundColor = bodyColorsIteration.next().value;
 
-    lastHelloNameIndex = helloNameIndex;
+    lastHelloNameIndexes.push(helloNameIndex);
+    lastHelloNameIndexes.length = 3;
 };
 
 intervalFunction();
