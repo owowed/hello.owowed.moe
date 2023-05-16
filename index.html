@@ -4,6 +4,16 @@
     <title>my github page</title>
   </head>
   <body>
-    <div>Hello, Azka!</div>
+    <div id="azka-message">Hello, Azka!</div>
+    <script>
+      const azkaMessage = document.querySelector("#azka-message");
+
+      setInterval(() => {
+        azkaMessage.textContent = "Hello, Rifat!";
+        setTimeout(() => {
+          azkaMessage.textContent = "Hello, Azka!";
+        }, 200);
+      }, 300);
+    </script>
   </body>
 </html>
