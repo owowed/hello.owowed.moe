@@ -14,6 +14,7 @@
       setInterval(() => {
         azkaMessage.textContent = `Hello, ${names[ind]}!`;
         ind++;
+        if (ind > names.length) ind = 0;
         setTimeout(() => {
           azkaMessage.textContent = `Hello, ${names[ind]}!`;
         }, 2000);
