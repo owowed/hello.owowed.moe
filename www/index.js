@@ -15,20 +15,28 @@ const iterateCycle = function* (array) {
 
 const bodyColorsIteration = iterateCycle(bodyColors);
 
-const lastHelloNameIndexes = [0, 0, 0];
+const lastHelloNameIndexes = new Set([0, 0, 0]);
+
+const setSetSize = (set, size) => {
+    while (set.size > size) {
+        set.delete(Array.from(set.values()).at(-1));
+    }
+};
 
 const intervalFunction = () => {
     let helloNameIndex = Math.floor(Math.random() * helloNames.length);
     
-    while (lastHelloNameIndexes.includes(helloNameIndex)) {
+    while (lastHelloNameIndexes.has(helloNameIndex)) {
         helloNameIndex = Math.floor(Math.random() * helloNames.length);
     }
+
+    console.log(helloNameIndex)
 
     azkaMessage.textContent = `Hello, ${helloNames[helloNameIndex]}!`;
     document.body.style.backgroundColor = bodyColorsIteration.next().value;
 
-    lastHelloNameIndexes.push(helloNameIndex);
-    lastHelloNameIndexes.length = 3;
+    lastHelloNameIndexes.add(helloNameIndex);
+    setSetSize(lastHelloNameIndexes, 3);
 };
 
 intervalFunction();
