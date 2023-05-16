@@ -1,6 +1,9 @@
-# owowed.github.io
-github io website
+# hello.owowed.moe
 
-personal website for myself
+> github page website
 
-currently experimenting
+> personal website for myself
+
+> currently experimenting
+
+visit at [hello.owowed.moe](https://hello.owowed.moe/)
