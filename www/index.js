@@ -30,8 +30,6 @@ const intervalFunction = () => {
         helloNameIndex = Math.floor(Math.random() * helloNames.length);
     }
 
-    console.log(helloNameIndex)
-
     azkaMessage.textContent = `Hello, ${helloNames[helloNameIndex]}!`;
     document.body.style.backgroundColor = bodyColorsIteration.next().value;
 
