@@ -5,6 +5,7 @@
   </head>
   <body>
     <div id="azka-message">Hello, Azka!</div>
+    <img id="orin-dance" src="./orin dance.gif">
     <style>
       body {
           display: grid;
@@ -14,11 +15,15 @@
           font-family: cursive;
           font-size: 2rem;
           font-weight: bold;
+          gap: 24px;
+      }
+      #orin-dance {
+        width: 200px;
       }
     </style>
     <script>
-      const names = ["Azka", "John", "Horu", "Rifat", "Luna", "Mokou", "Reisen"];
-      const color = ["blue", "yellow", "red", "purple", "pink"];
+      const names = ["Azka", "Horu", "Reimu", "Luna", "Mokou", "Reisen", "Orin"];
+      const color = ["blue", "green", "yellow", "cyan", "red", "pink"];
       const azkaMessage = document.querySelector("#azka-message");
       let ind = 0, cInd = 0;
 
