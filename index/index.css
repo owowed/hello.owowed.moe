@@ -6,11 +6,16 @@ body {
     justify-content: center;
     align-content: center;
     height: 100vh;
-    gap: 24px;
     margin: 0;
     padding: 0;
 
     animation: gradient 64s ease-in-out infinite;
+}
+
+#orin-dialog {
+    display: grid;
+    justify-items: center;
+    gap: 24px;
 }
 
 #azka-message {
