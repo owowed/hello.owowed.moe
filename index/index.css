@@ -1,15 +1,16 @@
 
-@import url(./styles/rainbow-colors.css);
+@import url(./styles/rainbow-gradient.css);
 
 body {
     display: grid;
     justify-content: center;
     align-content: center;
+
     height: 100vh;
     margin: 0;
     padding: 0;
 
-    animation: gradient 64s ease-in-out infinite;
+    animation: rainbow-gradient 64s ease-in-out infinite;
 }
 
 #orin-dialog {

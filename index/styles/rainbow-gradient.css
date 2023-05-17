@@ -1,19 +1,5 @@
-:root {
-    --red: #FF0000;
-    --orange: #FF7F00;
-    --yellow: #FFFF00;
-    --lime: #7FFF00;
-    --green: #00FF00;
-    --springGreen: #00FF7F;
-    --cyan: #00FFFF;
-    --azure: #007FFF;
-    --blue: #0000FF;
-    --violet: #7F00FF;
-    --magenta: #FF00FF;
-    --rose: #FF007F;
-}
 
-@keyframes gradient {
+@keyframes rainbow-gradient {
     0% {
         background: #ff0000;
     }
