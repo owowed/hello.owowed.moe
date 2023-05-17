@@ -31,7 +31,7 @@ const intervalFunction = () => {
     }
 
     azkaMessage.textContent = `Hello, ${helloNames[helloNameIndex]}!`;
-    // document.body.style.backgroundColor = bodyColorsIteration.next().value;
+    document.title = `hello ${helloNames[helloNameIndex]}!`;
 
     lastHelloNameIndexes.add(helloNameIndex);
     setSetSize(lastHelloNameIndexes, 3);
