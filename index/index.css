@@ -1,3 +1,6 @@
+
+@import url(./styles/rainbow-colors.css);
+
 body {
     display: grid;
     justify-content: center;
@@ -6,6 +9,8 @@ body {
     gap: 24px;
     margin: 0;
     padding: 0;
+
+    animation: gradient 64s ease-in-out infinite;
 }
 
 #azka-message {
