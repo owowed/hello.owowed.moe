@@ -31,7 +31,7 @@ const intervalFunction = () => {
     }
 
     azkaMessage.textContent = `Hello, ${helloNames[helloNameIndex]}!`;
-    document.title = `hello ${helloNames[helloNameIndex]}!`;
+    document.title = `hello ${helloNames[helloNameIndex]}!`.toLowerCase();
 
     lastHelloNameIndexes.add(helloNameIndex);
     setSetSize(lastHelloNameIndexes, 3);
