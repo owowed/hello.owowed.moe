@@ -15,17 +15,11 @@ jobs:
       - name: List folders
         run: ls
 
-      - name: Publish current workdir (which contains generated content) to GitHub Pages
-        uses: rayluo/github-pages-overwriter@v1.3
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
         with:
-          source-directory: index
-          target-branch: gh-pages
-
-      - name: Check out
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
-
-      - name: Create CNAME for custom domain
-        run: |
-          echo "$CUSTOM_DOMAIN" > CNAME
+            target_branch: gh-pages
+            build_dir: index
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
