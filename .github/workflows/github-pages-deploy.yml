@@ -12,7 +12,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v3
         
-      - name: List folders
+      - name: List project folders
         run: ls
 
       - name: Deploy to GitHub Pages
