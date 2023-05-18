@@ -18,8 +18,9 @@ const bodyColorsIteration = iterateCycle(bodyColors);
 const lastHelloNameIndexes = new Set([0, 0, 0]);
 
 const setSetSize = (set, size) => {
+    const setValues = Array.from(set.values());
     while (set.size > size) {
-        set.delete(Array.from(set.values()).at(-1));
+        set.delete(setValues.at(-1));
     }
 };
 
