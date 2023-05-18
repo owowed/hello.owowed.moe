@@ -24,8 +24,8 @@ jobs:
       - name: Check out
         uses: actions/checkout@v3
         with:
-          ref: "gh-pages"
+          ref: gh-pages
 
-      - name: CNAME domain
+      - name: Create CNAME for custom domain
         run: |
-          ls
+          echo "$CUSTOM_DOMAIN" > CNAME
