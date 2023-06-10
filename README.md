@@ -2,10 +2,10 @@
 
 > github page website
 
-> personal website for myself
+> personal website for experimenting web features
 
 > a lot of random stuff you might not care
 
-> currently experimenting
+> basically playground
 
 visit it at [hello.owowed.moe](https://hello.owowed.moe/)
