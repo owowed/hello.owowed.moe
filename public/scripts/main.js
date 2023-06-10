@@ -2,7 +2,7 @@
 const helloNames = await fetch("./data/hello-names.json").then(i => i.json());
 const bodyColors = await fetch("./data/body-colors.json").then(i => i.json());
 
-const azkaMessage = document.querySelector("#azka-message");
+const helloMessage = document.querySelector("#hello-message");
 
 const iterateCycle = function* (array) {
     let ind = 0;
@@ -16,6 +16,7 @@ const iterateCycle = function* (array) {
 const bodyColorsIteration = iterateCycle(bodyColors);
 
 const lastHelloNameIndexes = new Set([0, 0, 0]);
+const lastHelloNameIndexesSize = lastHelloNameIndexes.size;
 
 const setSetSize = (set, size) => {
     const setValues = Array.from(set.values());
@@ -24,20 +25,22 @@ const setSetSize = (set, size) => {
     }
 };
 
-const intervalFunction = () => {
-    let helloNameIndex = Math.floor(Math.random() * helloNames.length);
+const setRandomName = () => {
+    let helloNameIndex = 0;
     
     while (lastHelloNameIndexes.has(helloNameIndex)) {
         helloNameIndex = Math.floor(Math.random() * helloNames.length);
     }
 
-    azkaMessage.textContent = `Hello, ${helloNames[helloNameIndex]}!`;
-    document.title = `hello ${helloNames[helloNameIndex]}!`.toLowerCase();
+    const helloMessageText = `Hello, ${helloNames[helloNameIndex]}!`;
+
+    helloMessage.textContent = helloMessageText;
+    document.title = helloMessageText.toLowerCase();
 
     lastHelloNameIndexes.add(helloNameIndex);
-    setSetSize(lastHelloNameIndexes, 3);
+    setSetSize(lastHelloNameIndexes, lastHelloNameIndexesSize);
 };
 
-intervalFunction();
+setRandomName();
 
-setInterval(intervalFunction, 3000);
+setInterval(setRandomName, 3000);
