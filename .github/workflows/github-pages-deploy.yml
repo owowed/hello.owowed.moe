@@ -3,24 +3,47 @@ name: Github Pages Deploy
 on:
   push:
     branches:
-      - "main"
+      - main
+# on: workflow_dispatch
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out
+      - name: Check out main repo
         uses: actions/checkout@v3
-        
-      - name: List project folders
-        run: ls
-
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v3
+          
+      - name: Generate Directory Listings
+        uses: jayanta525/github-pages-directory-listing@v3.0.0
         with:
-            fqdn: hello.owowed.moe
-            target_branch: gh-pages
-            build_dir: public
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FOLDER: public
+
+      - name: .git folder cleanup
+        run: find public -type d -name ".git" -exec rm -rf {} +
+
+      - name: Upload github-pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: public
+        
+      - name: Run tree
+        run: tree
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+      - name: Run tree
+        run: tree
