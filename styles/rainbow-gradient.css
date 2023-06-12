@@ -1,0 +1,55 @@
+
+@keyframes rainbow-gradient {
+    0% {
+        background: #ff0000;
+    }
+    6.25% {
+        background: #ff7f00;
+    }
+    12.5% {
+        background: #ffff00;
+    }
+    18.75% {
+        background: #80ff00;
+    }
+    25% {
+        background: #00ff00;
+    }
+    31.25% {
+        background: #00ff80;
+    }
+    37.5% {
+        background: #00ffff;
+    }
+    43.75% {
+        background: #0080ff;
+    }
+    50% {
+        background: #0000ff;
+    }
+    56.25% {
+        background: #7f00ff;
+    }
+    62.5% {
+        background: #ff00ff;
+    }
+    68.75% {
+        background: #ff007f;
+    }
+    75% {
+        background: #80ffcc;
+    }
+    81.25% {
+        background: #00ffff;
+    }
+    87.5% {
+        background: #ff80cc;
+    }
+    93.75% {
+        background: #ff80cc;
+    }
+    100% {
+        background: #ff0000;
+    }
+  }
+  

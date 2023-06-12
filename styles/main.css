@@ -1,0 +1,31 @@
+
+@import url(./rainbow-gradient.css);
+
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    animation: rainbow-gradient 64s ease-in-out infinite;
+}
+
+#orin-dialog {
+    display: grid;
+    justify-items: center;
+    gap: 24px;
+}
+
+#hello-message {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+#orin-dance {
+    width: 200px;
+}
